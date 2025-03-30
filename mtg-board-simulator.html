@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<title>MTG - Automano</title>
+		<script src="api-manager.js"></script>
+		<script src="board-data.js"></script>
+		<script src="main.js"></script>
+	</header>
+
+	<style type="text/css">
+		li { width: fit-content; margin-bottom: 0.1rem;}
+		li:hover {cursor: grab;}
+		button { padding-top: 0.3rem; padding-bottom: 0.3rem; margin-top: 0.2rem; margin-bottom: 0.2rem; }
+	</style>
+
+	<body>
+
+		<h1>Autocargador de manos</h1>
+		<p>Introduce las cartas de tu mazo y carga una mano de 7 cartas</p>
+
+		<div style="display: flex; flex-direction: row;">
+
+			<div style="width: 400px; margin-right: 2rem;">
+				<h2> - Mazo - </h2>
+				<div style="display: flex; flex-direction: row; align-items: center;">
+					<textarea id="library" style="width: 300px; height: 30rem;  margin: 1rem;"></textarea>
+					<button style="height: 100%;" onclick="generateDeck()" >Actualizar mazo</button>
+				</div>
+
+				<p id="log" style="background-color: black; color: white; padding: 0.2rem;">[sin acción]</p>
+			</div>
+
+			<div style="width: 400px; margin-right: 2rem;">
+				<h2> - Mano - </h2>
+				<ul id="hand" style="display: flex; flex-direction: column;"></ul>
+			</div>
+
+			<div style="width: 16%; display: flex; flex-direction: column;">
+				<h2> - Acciones - </h2>
+				<button onclick="draw(7)">Cargar mano de 7 cartas</button>
+				<button onclick="draw(1)">Robo de turno</button>
+				<button onclick="draw(2)">Cargar robo de 2 cartas</button>
+
+				<h2> - Otras - </h2>
+				<button onclick="shuffle()">Barajar mazo</button>
+				<button onclick="draw(5)">Cargar mano de 5 cartas</button>
+
+				<h2> - Imagen - </h2>
+				<img id="hoverCardIMG" src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=0&type=card" width="200px"/>
+			</div>
+
+		</div>
+	</body>
+
+</html>
