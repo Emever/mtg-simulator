@@ -62,6 +62,7 @@ function shuffle() {
 function draw(nCards) {
     if (nCards > deck.size()) { // check if you can draw as many cards as requested
         log("you can't draw that many cards...");
+        alert("You can't draw that many cards!");
         
     } else { // if so >>
         for (var i=0; i<nCards; i++) {
