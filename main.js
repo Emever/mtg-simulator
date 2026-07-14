@@ -74,6 +74,10 @@ function draw(nCards) {
     }
 }
 
+function fullDraw() {
+    draw(deck.size());
+}
+
 function removeCard(cardLi, cardId) {
     cardLi.remove();
 
