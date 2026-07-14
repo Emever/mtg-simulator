@@ -18,8 +18,11 @@ function generateDeck() {
         var name = "";
         
         if (isNaN(parseInt(line[0]))) {
-            nCard = 1;
-            name = line;
+            if (line[0] == "#") { return }
+            else {
+                nCard = 1;
+                name = line;
+            }
 
         } else {
             if (line[1] == " ") {
