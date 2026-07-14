@@ -13,7 +13,7 @@
 		button { padding-top: 0.3rem; padding-bottom: 0.3rem; margin-top: 0.2rem; margin-bottom: 0.2rem; }
 	</style>
 
-	<body style="color: darkslateblue; background-color: lightsteelblue; font-family: math;">
+	<body style="color: #aaa1dc; background-color: #0F181D; font-family: math; margin: 1rem;">
 		<h1>Deck visualizer</h1>
 		<p>Add your full deck and interact with it</p>
 
@@ -22,7 +22,7 @@
 			<div style="width: 250px; margin-right: 1rem; margin-left: 1rem;">
 				<h2> - Deck - </h2>
 				<div style="display: flex; flex-direction: column; align-items: center;">
-					<textarea id="library" style="width: 300px; height: 30rem;  margin: 1rem;"></textarea>
+					<textarea id="library" style="width: auto; height: 26rem;  margin: 1rem;"></textarea>
 					<button style="height: 100%;" onclick="generateDeck()" >Update deck</button>
 				</div>
 
@@ -34,7 +34,7 @@
 				<ul id="hand" style="display: flex; flex-direction: column;"></ul>
 			</div>
 
-			<div style="width: 100px; display: flex; flex-direction: column; margin-right: 1rem; margin-left: 1rem;">
+			<div style="width: 150px; display: flex; flex-direction: column; margin-right: 1rem; margin-left: 1rem;">
 				<h2> - Actions - </h2>
 				<button onclick="draw(100)">Draw full deck</button>
 				<button onclick="draw(7)">Draw 7</button>
@@ -46,7 +46,7 @@
 
 			<div style="margin-right: 1rem; margin-left: 1rem;">
 				<h2> - Card preview - </h2>
-				<img id="hoverCardIMG" src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=0&type=card"/>
+				<img id="hoverCardIMG" src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=0&type=card" width="300px"/>
 			</div>
 
 		</div>
