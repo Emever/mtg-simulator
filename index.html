@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<header>
-		<title>MTG - Automano</title>
+		<title>MTG Visualizer</title>
+		<link rel="icon" type="image/x-icon" href="/mtg-favicon.png">
 		<script src="api-manager.js"></script>
 		<script src="board-data.js"></script>
 		<script src="main.js"></script>
 	</header>
 
 	<style type="text/css">
-		li { width: fit-content; margin-bottom: 0.1rem;}
+		li { width: auto; margin-bottom: 0.1rem;}
 		li:hover {cursor: grab;}
 		button { padding-top: 0.3rem; padding-bottom: 0.3rem; margin-top: 0.2rem; margin-bottom: 0.2rem; }
 	</style>
@@ -22,7 +23,7 @@
 			<div style="width: 250px; margin-right: 1rem; margin-left: 1rem;">
 				<h2> - Deck - </h2>
 				<div style="display: flex; flex-direction: column; align-items: center;">
-					<textarea id="library" style="width: auto; height: 26rem;  margin: 1rem;"></textarea>
+					<textarea id="library" style="width: 250px; height: 26rem;  margin: 1rem;"></textarea>
 					<button style="height: 100%;" onclick="generateDeck()" >Update deck</button>
 				</div>
 
@@ -46,7 +47,11 @@
 
 			<div style="margin-right: 1rem; margin-left: 1rem;">
 				<h2> - Card preview - </h2>
-				<img id="hoverCardIMG" src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=0&type=card" width="300px"/>
+				<img
+					id="hoverCardIMG"
+					src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=0&type=card"
+					height="550px"
+					style="border-radius: 20px;"/>
 			</div>
 
 		</div>
